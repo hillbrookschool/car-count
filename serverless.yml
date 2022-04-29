@@ -1,6 +1,5 @@
 service: hillbrook-traffic
-app: hillbrook-traffic
-org: kielni
+useDotenv: true
 
 provider:
   name: aws
@@ -19,7 +18,7 @@ provider:
       Resource: ${env:LOGS_ARN}
     - Effect: Allow
       Action:
-        - Allow: sns:Publish
+        - sns:Publish
       Resource: ${env:ALERT_ARN}
     - Effect: Allow
       Action:
@@ -38,7 +37,6 @@ package:
 
 plugins:
   - serverless-python-requirements
-
 custom:
   pythonRequirements:
       # to make serverless work with pyenv
