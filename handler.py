@@ -33,7 +33,7 @@ import xmltodict
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 SNAPS_URL = (
-    "https://satts11.sensysnetworks.net/snaps/dataservice/stats.xml?"
+    "https://snaps02.sensysnetworks.net/snaps/dataservice/stats.xml?"
     + "userName={username}&password={password}&startTime={start_ts}&period={period}&"
     + "locationGroup={station}"
 )
